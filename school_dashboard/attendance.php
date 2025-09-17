@@ -1,7 +1,7 @@
 <?php
 $pageTitle = 'Attendance';
 $activePage = 'attendance';
-include __DIR__ . '/includes/header.php';
+include __DIR__ . '/includes/heaer.php';
 include __DIR__ . '/includes/sidebar.php';
 ?>
       <main class="col py-3">
@@ -54,4 +54,5 @@ include __DIR__ . '/includes/sidebar.php';
         </div>
       </main>
 <?php include __DIR__ . '/includes/footer.php'; ?>
+
 
