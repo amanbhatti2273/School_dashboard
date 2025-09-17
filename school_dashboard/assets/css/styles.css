@@ -1,0 +1,27 @@
+/* Layout helpers */
+.sidebar .nav-link.active {
+	background-color: #0d6efd;
+	color: #fff !important;
+}
+
+.sidebar .nav-link {
+	border-radius: .375rem;
+	margin: .125rem .5rem;
+}
+
+.card-stat {
+	min-height: 120px;
+}
+
+.table-responsive {
+	overflow-y: hidden;
+}
+
+/* Demo avatar */
+.avatar-sm {
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
