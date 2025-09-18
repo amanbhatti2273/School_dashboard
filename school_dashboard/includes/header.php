@@ -16,7 +16,7 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
     <div class="container-fluid">
-      <a class="navbar-brand d-flex align-items-center gap-2" href="/school_dashboard/index.php">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="/School_dashboard/school_dashboard/index.php">
         <i class="bi bi-mortarboard"></i>
         <span>School Dashboard</span>
       </a>
@@ -34,8 +34,8 @@
               <i class="bi bi-person-circle fs-5 me-1"></i> Admin
             </a>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userMenu">
-              <li><a class="dropdown-item" href="/school_dashboard/profile.php"><i class="bi bi-person me-2"></i>Profile</a></li>
-              <li><a class="dropdown-item" href="/school_dashboard/settings.php"><i class="bi bi-gear me-2"></i>Settings</a></li>
+              <li><a class="dropdown-item" href="/School_dashboard/school_dashboard/profile.php"><i class="bi bi-person me-2"></i>Profile</a></li>
+              <li><a class="dropdown-item" href="/School_dashboard/school_dashboard/settings.php"><i class="bi bi-gear me-2"></i>Settings</a></li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="#" onclick="return false;"><i class="bi bi-box-arrow-right me-2"></i>Logout</a></li>
             </ul>
