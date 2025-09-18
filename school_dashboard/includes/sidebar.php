@@ -6,7 +6,7 @@
     <ul class="nav nav-pills flex-column mb-auto">
       <li class="nav-item">
         <a href="/School_dashboard/school_dashboard/index.php" class="nav-link <?php echo $activePage==='dashboard'?'active':''; ?>">
-          <i class="bi bi-speedometer2 me-2"></i> Dashboardss
+          <i class="bi bi-speedometer2 me-2"></i> Dashboard
         </a>
       </li>
       <li>
