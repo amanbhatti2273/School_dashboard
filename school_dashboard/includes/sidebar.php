@@ -5,62 +5,62 @@
   <div class="d-flex flex-column align-items-stretch pt-3 text-dark min-vh-100">
     <ul class="nav nav-pills flex-column mb-auto">
       <li class="nav-item">
-        <a href="/School_dashboard/school_dashboard/index.php" class="nav-link <?php echo $activePage==='dashboard'?'active':''; ?>">
+        <a href="/School_dashboard/school_dashboard/index.php" class="nav-link <?php echo $activePage === 'dashboard' ? 'active' : 'text-dark'; ?>">
           <i class="bi bi-speedometer2 me-2"></i> Dashboard
         </a>
       </li>
       <li>
-        <a href="/School_dashboard/school_dashboard/students.php" class="nav-link text-dark <?php echo $activePage==='students'?'active':''; ?>">
+        <a href="/School_dashboard/school_dashboard/students.php" class="nav-link <?php echo $activePage === 'students' ? 'active' : 'text-dark'; ?>">
           <i class="bi bi-people me-2"></i> Students
         </a>
       </li>
       <li>
-        <a href="/School_dashboard/school_dashboard/teachers.php" class="nav-link text-dark <?php echo $activePage==='teachers'?'active':''; ?>">
+        <a href="/School_dashboard/school_dashboard/teachers.php" class="nav-link <?php echo $activePage === 'teachers' ? 'active' : 'text-dark'; ?>">
           <i class="bi bi-person-badge me-2"></i> Teachers
         </a>
       </li>
       <li>
-        <a href="/School_dashboard/school_dashboard/classes.php" class="nav-link text-dark <?php echo $activePage==='classes'?'active':''; ?>">
+        <a href="/School_dashboard/school_dashboard/classes.php" class="nav-link <?php echo $activePage === 'classes' ? 'active' : 'text-dark'; ?>">
           <i class="bi bi-columns-gap me-2"></i> Classes
         </a>
       </li>
       <li>
-        <a href="/School_dashboard/school_dashboard/attendance.php" class="nav-link text-dark <?php echo $activePage==='attendance'?'active':''; ?>">
+        <a href="/School_dashboard/school_dashboard/attendance.php" class="nav-link <?php echo $activePage === 'attendance' ? 'active' : 'text-dark'; ?>">
           <i class="bi bi-check2-square me-2"></i> Attendance
         </a>
       </li>
       <li>
-        <a href="/School_dashboard/school_dashboard/fees.php" class="nav-link text-dark <?php echo $activePage==='fees'?'active':''; ?>">
+        <a href="/School_dashboard/school_dashboard/fees.php" class="nav-link <?php echo $activePage === 'fees' ? 'active' : 'text-dark'; ?>">
           <i class="bi bi-cash-coin me-2"></i> Fees
         </a>
       </li>
       <li>
-        <a href="/School_dashboard/school_dashboard/timetable.php" class="nav-link text-dark <?php echo $activePage==='timetable'?'active':''; ?>">
+        <a href="/School_dashboard/school_dashboard/timetable.php" class="nav-link <?php echo $activePage === 'timetable' ? 'active' : 'text-dark'; ?>">
           <i class="bi bi-calendar-week me-2"></i> Timetable
         </a>
       </li>
       <li>
-        <a href="/School_dashboard/school_dashboard/exams.php" class="nav-link text-dark <?php echo $activePage==='exams'?'active':''; ?>">
+        <a href="/School_dashboard/school_dashboard/exams.php" class="nav-link <?php echo $activePage === 'exams' ? 'active' : 'text-dark'; ?>">
           <i class="bi bi-journal-check me-2"></i> Exams
         </a>
       </li>
       <li>
-        <a href="/School_dashboard/school_dashboard/tests.php" class="nav-link text-dark <?php echo $activePage==='tests'?'active':''; ?>">
+        <a href="/School_dashboard/school_dashboard/tests.php" class="nav-link <?php echo $activePage === 'tests' ? 'active' : 'text-dark'; ?>">
           <i class="bi bi-clipboard-data me-2"></i> Tests
         </a>
       </li>
       <li>
-        <a href="/School_dashboard/school_dashboard/results.php" class="nav-link text-dark <?php echo $activePage==='results'?'active':''; ?>">
+        <a href="/School_dashboard/school_dashboard/results.php" class="nav-link <?php echo $activePage === 'results' ? 'active' : 'text-dark'; ?>">
           <i class="bi bi-bar-chart-line me-2"></i> Results
         </a>
       </li>
       <li>
-        <a href="/School_dashboard/school_dashboard/tasks.php" class="nav-link text-dark <?php echo $activePage==='tasks'?'active':''; ?>">
+        <a href="/School_dashboard/school_dashboard/tasks.php" class="nav-link <?php echo $activePage === 'tasks' ? 'active' : 'text-dark'; ?>">
           <i class="bi bi-list-check me-2"></i> Student Tasks
         </a>
       </li>
       <li>
-        <a href="/School_dashboard/school_dashboard/settings.php" class="nav-link text-dark <?php echo $activePage==='settings'?'active':''; ?>">
+        <a href="/School_dashboard/school_dashboard/settings.php" class="nav-link <?php echo $activePage === 'settings' ? 'active' : 'text-dark'; ?>">
           <i class="bi bi-gear me-2"></i> Settings
         </a>
       </li>
@@ -69,15 +69,14 @@
     <div class="dropdown px-3 pb-3">
       <a href="#" class="d-flex align-items-center text-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
         <i class="bi bi-person-circle fs-5 me-2"></i>
-        <strong>Admin</strong>
+        <strong><?php echo isset($_SESSION['username']) ? htmlspecialchars($_SESSION['username']) : 'User'; ?></strong>
       </a>
       <ul class="dropdown-menu dropdown-menu-end text-small shadow">
         <li><a class="dropdown-item" href="/School_dashboard/school_dashboard/profile.php">Profile</a></li>
         <li><a class="dropdown-item" href="/School_dashboard/school_dashboard/settings.php">Settings</a></li>
         <li><hr class="dropdown-divider"></li>
-        <li><a class="dropdown-item" href="#" onclick="return false;">Sign out</a></li>
+        <li><a class="dropdown-item" href="/School_dashboard/school_dashboard/logout.php" onclick="return confirm('Are you sure you want to sign out?');">Sign out</a></li>
       </ul>
     </div>
   </div>
 </aside>
-

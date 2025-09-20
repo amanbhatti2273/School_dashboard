@@ -1,4 +1,15 @@
 <?php
+  session_start();
+
+  // Get the current script name to avoid redirect loop on login/signup pages
+  $current_page = basename($_SERVER['PHP_SELF']);
+  $public_pages = ['login.php', 'signup.php'];
+
+  // If the user is not logged in and the current page is not public, redirect to login
+  if (!isset($_SESSION['loggedin']) && !in_array($current_page, $public_pages)) {
+      header("location: login.php");
+      exit;
+  }
   // Expect $pageTitle and $activePage to be set by including page
   if (!isset($pageTitle)) { $pageTitle = 'School Dashboard'; }
   if (!isset($activePage)) { $activePage = 'dashboard'; }
@@ -31,13 +42,13 @@
         <ul class="navbar-nav ms-3 mb-2 mb-lg-0">
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="userMenu" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <i class="bi bi-person-circle fs-5 me-1"></i> Admin
+              <i class="bi bi-person-circle fs-5 me-1"></i> <?php echo isset($_SESSION['username']) ? htmlspecialchars($_SESSION['username']) : 'User'; ?>
             </a>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userMenu">
               <li><a class="dropdown-item" href="/School_dashboard/school_dashboard/profile.php"><i class="bi bi-person me-2"></i>Profile</a></li>
               <li><a class="dropdown-item" href="/School_dashboard/school_dashboard/settings.php"><i class="bi bi-gear me-2"></i>Settings</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#" onclick="return false;"><i class="bi bi-box-arrow-right me-2"></i>Logout</a></li>
+              <li><a class="dropdown-item" href="/School_dashboard/school_dashboard/logout.php" onclick="return confirm('Are you sure you want to logout?');"><i class="bi bi-box-arrow-right me-2"></i>Logout</a></li>
             </ul>
           </li>
         </ul>
@@ -46,4 +57,3 @@
   </nav>
   <div class="container-fluid">
     <div class="row flex-nowrap">
-
