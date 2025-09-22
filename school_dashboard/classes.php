@@ -20,7 +20,7 @@ include __DIR__ . '/includes/sidebar.php';
                       <div class="fw-semibold">Class <?php echo $g; ?></div>
                       <div class="text-muted small">Students: <?php echo rand(20,40); ?></div>
                     </div>
-                    <a class="btn btn-outline-primary btn-sm" href="/school_dashboard/class.php?c=<?php echo urlencode($g); ?>">Open</a>
+                    <a class="btn btn-outline-primary btn-sm" href="/School_dashboard/school_dashboard/class.php?c=<?php echo urlencode($g); ?>">Open</a>
                   </div>
                 </div>
               </div>

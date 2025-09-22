@@ -11,9 +11,9 @@ include __DIR__ . '/includes/sidebar.php';
           <div class="d-flex justify-content-between align-items-center mb-3">
             <h4 class="mb-0">Class <?php echo htmlspecialchars($klass); ?></h4>
             <div class="btn-group">
-              <a class="btn btn-outline-secondary <?php echo $activeTab==='students'?'active':''; ?>" href="/school_dashboard/class.php?c=<?php echo urlencode($klass); ?>&tab=students">Students</a>
-              <a class="btn btn-outline-secondary <?php echo $activeTab==='subjects'?'active':''; ?>" href="/school_dashboard/class.php?c=<?php echo urlencode($klass); ?>&tab=subjects">Subjects</a>
-              <a class="btn btn-outline-secondary <?php echo $activeTab==='tasks'?'active':''; ?>" href="/school_dashboard/class.php?c=<?php echo urlencode($klass); ?>&tab=tasks">Class Tasks</a>
+              <a class="btn btn-outline-secondary <?php echo $activeTab==='students'?'active':''; ?>" href="/School_dashboard/school_dashboard/class.php?c=<?php echo urlencode($klass); ?>&tab=students">Students</a>
+              <a class="btn btn-outline-secondary <?php echo $activeTab==='subjects'?'active':''; ?>" href="/School_dashboard/school_dashboard/class.php?c=<?php echo urlencode($klass); ?>&tab=subjects">Subjects</a>
+              <a class="btn btn-outline-secondary <?php echo $activeTab==='tasks'?'active':''; ?>" href="/School_dashboard/school_dashboard/class.php?c=<?php echo urlencode($klass); ?>&tab=tasks">Class Tasks</a>
             </div>
           </div>
 
