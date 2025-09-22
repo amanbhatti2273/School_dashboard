@@ -50,7 +50,7 @@ include __DIR__ . '/includes/sidebar.php';
                       <td><?php echo $i; ?></td>
                       <td>
                         <div class="d-flex align-items-center gap-2">
-                          <img class="avatar-sm" src="https://i.pravatar.cc/64?img=<?php echo $i+3; ?>" alt="">
+                          <img class="avatar-sm" src="https://i.pravatar.cc/64?img=<?php echo $i; ?>" alt="">
                           <span>Student <?php echo $i; ?></span>
                         </div>
                       </td>
@@ -99,13 +99,25 @@ include __DIR__ . '/includes/sidebar.php';
                       <label class="form-label">Last Name</label>
                       <input type="text" class="form-control" placeholder="e.g. Raza">
                     </div>
-                    <div class="col-12">
+                    <div class="col-12 col-md-6">
+                      <label class="form-label">Father's Name</label>
+                      <input type="text" class="form-control" placeholder="e.g. Ahmed Khan">
+                    </div>
+                    <div class="col-12 col-md-6">
                       <label class="form-label">Class</label>
                       <select class="form-select">
                         <option>5-A</option>
                         <option>6-B</option>
                         <option>7-C</option>
                       </select>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <label class="form-label">Contact Number</label>
+                      <input type="text" class="form-control" placeholder="e.g. 0300-1234567">
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <label class="form-label">Email</label>
+                      <input type="email" class="form-control" placeholder="e.g. student@example.com">
                     </div>
                   </div>
                 </div>
@@ -120,3 +132,6 @@ include __DIR__ . '/includes/sidebar.php';
       </main>
 <?php include __DIR__ . '/includes/footer.php'; ?>
 
+<?php
+
+?>

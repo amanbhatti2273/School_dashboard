@@ -8,7 +8,7 @@ include __DIR__ . '/includes/sidebar.php';
         <div class="container-fluid">
           <div class="d-flex justify-content-between align-items-center mb-3">
             <h4 class="mb-0">Classes</h4>
-            <button class="btn btn-primary"><i class="bi bi-plus-lg me-1"></i>Create Class</button>
+            <a href="class_create.php" class="btn btn-primary"><i class="bi bi-plus-lg me-1"></i>Create Class</a>
           </div>
           <div class="row g-3">
             <?php $grades = ['5-A','6-B','7-C','8-A','9-B','10-C']; foreach ($grades as $g): ?>
@@ -30,4 +30,3 @@ include __DIR__ . '/includes/sidebar.php';
         </div>
       </main>
 <?php include __DIR__ . '/includes/footer.php'; ?>
-
